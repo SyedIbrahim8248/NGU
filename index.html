@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NGU Urdu Online Coaching</title>
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0a2088;--ink:#0d1a4d;--gold:#fdb913;--gold-deep:#8a6200;--teal:#00899e;--bg:#ffffff;--soft:#f3f5fc;--text:#2c3558;--muted:#5d6687;--card:#ffffff;--line:#dfe3f2;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--navy:#9fb2ff;--ink:#eef1ff;--gold:#fdb913;--gold-deep:#fdb913;--teal:#4cc9dd;--bg:#0a1030;--soft:#101845;--text:#d5dbf5;--muted:#9aa4cf;--card:#121b4d;--line:#24306e;color-scheme:dark}}
+:root[data-theme="dark"]{--navy:#9fb2ff;--ink:#eef1ff;--gold:#fdb913;--gold-deep:#fdb913;--teal:#4cc9dd;--bg:#0a1030;--soft:#101845;--text:#d5dbf5;--muted:#9aa4cf;--card:#121b4d;--line:#24306e;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.7 Poppins,system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;color:var(--ink);line-height:1.2;margin:0}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Playfair Display",serif;font-weight:700;color:var(--ink)}
+.brand img{height:44px;width:44px;object-fit:contain;border-radius:8px;background:#fff}
+nav{display:flex;gap:22px;align-items:center;font-size:14px;font-weight:500}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--gold);color:#1a1400;text-decoration:none;font-weight:600;padding:12px 24px;border-radius:999px;border:0;cursor:pointer;font:600 15px Poppins,sans-serif}
+.btn:hover{filter:brightness(1.06)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:#14216b}}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:96px}
+.hero h1{color:#fff;font-size:clamp(34px,5.4vw,58px);font-weight:800}
+.hero p{max-width:46ch;color:#d6ddff;margin:18px 0 28px}
+.hero .urdu{font-family:"Noto Nastaliq Urdu",serif;font-size:clamp(34px,6vw,60px);line-height:2;color:var(--gold);text-align:center;direction:rtl}
+.hero .urdu small{display:block;font-size:.34em;line-height:1.6;color:#d6ddff;font-family:Poppins,sans-serif;direction:ltr}
+.hero .logo{background:#fff;border-radius:24px;padding:20px;max-width:260px;margin:0 auto 12px}
+.curve{position:absolute;left:0;right:0;bottom:-1px;height:48px;background:var(--bg);border-radius:50% 50% 0 0/100% 100% 0 0}
+section{padding:80px 0}
+.soft{background:var(--soft)}
+.head{max-width:620px;margin-bottom:44px}
+.head h2{font-size:clamp(28px,4vw,40px)}
+.head p{color:var(--muted);margin:12px 0 0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fac{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px 24px;text-align:center}
+.fac .ph{width:168px;height:168px;margin:0 auto 20px;border-radius:50%;padding:5px;background:var(--card);box-shadow:0 0 0 4px var(--gold),0 10px 30px rgba(10,32,136,.18)}
+.fac .ph img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.fac .role{color:var(--gold-deep);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.fac h3{font-size:24px;margin:6px 0 4px}
+.fac .sub{color:var(--teal);font-weight:600;font-size:15px}
+.fac .edu{color:var(--muted);font-size:14px;margin:10px 0 18px}
+.fac .yrs{border-top:1px solid var(--line);padding-top:16px;display:flex;justify-content:center;align-items:baseline;gap:8px}
+.fac .yrs b{font:800 34px "Playfair Display",serif;color:var(--ink)}
+.fac .yrs span{color:var(--muted);font-size:14px}
+.learn{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.learn div{border-left:4px solid var(--gold);padding:4px 0 4px 16px}
+.learn h3{font-size:19px;margin-bottom:6px}
+.learn p{margin:0;color:var(--muted);font-size:14px}
+.cta{background:var(--navy);color:#fff;border-radius:28px;padding:48px 32px;text-align:center}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cta{background:#14216b}}
+.cta h2{color:#fff;font-size:clamp(26px,4vw,38px)}
+.cta p{color:#d6ddff;margin:12px auto 24px;max-width:48ch}
+.cta .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta .btn.ghost{color:#fff;border-color:#ffffff66}
+footer{padding:28px 0;color:var(--muted);font-size:14px;text-align:center;border-top:1px solid var(--line)}
+@media (max-width:820px){
+ .hero .wrap{grid-template-columns:1fr;padding-top:48px;padding-bottom:80px}
+ .hero .side{order:-1}.grid3{grid-template-columns:1fr}.learn{grid-template-columns:1fr 1fr}
+ nav a.hide{display:none}section{padding:56px 0}
+}
+@media (max-width:480px){.learn{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.quiz{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;max-width:760px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tab{border:2px solid var(--line);background:transparent;color:var(--text);padding:8px 18px;border-radius:999px;font:500 14px Poppins,sans-serif;cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tab[aria-pressed="true"]{color:#0a1030}}
+.prog{font-size:13px;color:var(--muted);margin-bottom:10px}
+.bar2{height:6px;background:var(--line);border-radius:6px;margin-bottom:22px;overflow:hidden}
+.bar2 i{display:block;height:100%;background:var(--gold);width:0;transition:width .3s}
+.q{font-family:"Noto Nastaliq Urdu",serif;font-size:24px;line-height:2.2;direction:rtl;text-align:right;color:var(--ink);margin:0 0 4px}
+.hint{font-size:14px;color:var(--muted);margin:0 0 18px}
+.opts{display:grid;gap:10px}
+.opt{font-family:"Noto Nastaliq Urdu",serif;font-size:20px;line-height:2;direction:rtl;text-align:right;padding:6px 18px;border:2px solid var(--line);border-radius:14px;background:var(--bg);color:var(--text);cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--navy)}
+.opt.ok{border-color:#1a9d5a;background:#1a9d5a22}
+.opt.no{border-color:#d33;background:#d3333322}
+.opt:disabled{cursor:default}
+.fb{margin:16px 0 0;font-size:14px;min-height:24px}
+.next{margin-top:14px}
+.res{text-align:center;padding:10px 0}
+.res b{font:800 56px "Playfair Display",serif;color:var(--ink)}
+.res .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.res .btn.ghost{color:var(--ink)}
+.enq{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:560px;margin:0 auto 18px;text-align:left}
+.enq input,.enq select{width:100%;padding:12px 14px;border-radius:12px;border:2px solid #ffffff44;background:#ffffff1a;color:#fff;font:400 15px Poppins,sans-serif}
+.enq select option{color:#111}
+.enq input::placeholder{color:#d6ddff}
+@media (max-width:600px){.enq{grid-template-columns:1fr}.quiz{padding:20px 16px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap bar">
+  <a class="brand" href="#top"><img src="logo.png" alt="NGU logo"><span>NGU Urdu Coaching</span></a>
+  <nav aria-label="Main">
+   <a class="hide" href="#faculty">Faculty</a>
+   <a class="hide" href="#learn">What you learn</a>
+   <a class="hide" href="#quiz">Free quiz</a>
+   <a class="btn" href="#join">Join now</a>
+  </nav>
+ </div>
+</header>
+
+<main id="top">
+ <div class="hero">
+  <div class="wrap">
+   <div>
+    <h1>Learn Urdu language and literature from trained teachers</h1>
+    <p>Online coaching with senior faculty who studied Urdu at Jamia Millia Islamia, Darul Uloom Deoband and MANUU Hyderabad.</p>
+    <a class="btn" href="#join">Book a free demo class</a>
+    <a class="btn ghost" href="#faculty" style="color:#fff;border-color:#ffffff66;margin-left:8px">Meet the faculty</a>
+   </div>
+   <div class="side">
+    <div class="logo"><img src="logo.png" alt="NGU graduation cap logo"></div>
+    <div class="urdu" lang="ur">اردو زبان و ادب<small>Urdu language and literature</small></div>
+   </div>
+  </div>
+  <div class="curve"></div>
+ </div>
+
+ <section id="faculty">
+  <div class="wrap">
+   <div class="head">
+    <h2>Our faculty</h2>
+    <p>Three teachers, more than 12 years of teaching between them.</p>
+   </div>
+   <div class="grid3">
+    <article class="fac">
+     <div class="ph"><img src="anamta.jpg" alt="Anamta Javed Khan"></div>
+     <div class="role">Senior faculty</div>
+     <h3>Anamta Javed Khan</h3>
+     <div class="sub">Urdu Language &amp; Literature</div>
+     <p class="edu">Jamia Millia Islamia, New Delhi</p>
+     <div class="yrs"><b>3+</b><span>years of teaching experience</span></div>
+    </article>
+    <article class="fac">
+     <div class="ph"><img src="faheem.jpg" alt="Faheem Sir"></div>
+     <div class="role">Senior faculty</div>
+     <h3>Faheem Sir</h3>
+     <div class="sub">Urdu Language &amp; Literature</div>
+     <p class="edu">Fazil, Darul Uloom Deoband<br>M.A., MANUU Hyderabad</p>
+     <div class="yrs"><b>6</b><span>years of teaching experience</span></div>
+    </article>
+    <article class="fac">
+     <div class="ph"><img src="director.jpg" alt="Director Sir"></div>
+     <div class="role">Director</div>
+     <h3>Director Sir</h3>
+     <div class="sub">Teaching &amp; Academic Guidance</div>
+     <p class="edu">B.S., MANUU<br>Diploma, University of Delhi</p>
+     <div class="yrs"><b>3+</b><span>years of teaching and guidance</span></div>
+    </article>
+   </div>
+  </div>
+ </section>
+
+ <section id="learn" class="soft">
+  <div class="wrap">
+   <div class="head">
+    <h2>What you learn</h2>
+    <p>Edit these four topics to match your real course list.</p>
+   </div>
+   <div class="learn">
+    <div><h3>Reading and writing</h3><p>Urdu script, spelling and correct sentences.</p></div>
+    <div><h3>Grammar</h3><p>Rules of Urdu grammar with daily practice.</p></div>
+    <div><h3>Literature</h3><p>Prose and poetry, with meanings and context.</p></div>
+    <div><h3>Exam guidance</h3><p>Study plans and revision for your exams.</p></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="quiz">
+  <div class="wrap">
+   <div class="head">
+    <h2>Test your Urdu</h2>
+    <p>Pick a level and answer 5 questions. You see the right answer after every question.</p>
+   </div>
+   <div class="quiz" id="quizBox" aria-live="polite"></div>
+  </div>
+ </section>
+
+ <section id="join">
+  <div class="wrap">
+   <div class="cta">
+    <h2>Start with a free demo class</h2>
+    <p>Send your name and level. We will reply on WhatsApp with batch details.</p>
+    <div class="enq">
+     <input id="nm" type="text" placeholder="Your name" aria-label="Your name">
+     <select id="lv" aria-label="Your level"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select>
+    </div>
+    <div class="row">
+     <a class="btn" id="wa" href="https://wa.me/6201708997" target="_blank" rel="noopener">Send on WhatsApp</a>
+     <a class="btn ghost" href="tel:6201708997">Call us</a>
+    </div>
+   </div>
+  </div>
+ </section>
+</main>
+
+<footer><div class="wrap">© <span id="yr">2026</span> NGU Urdu Online Coaching</div></footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+var PHONE='6201708997';
+var DATA={
+Beginner:[
+{q:'اردو کس طرف سے لکھی جاتی ہے؟',h:'Which direction is Urdu written in?',o:['دائیں سے بائیں','بائیں سے دائیں','اوپر سے نیچے','نیچے سے اوپر'],a:0,e:'Urdu is written from right to left.'},
+{q:'"شاعرِ مشرق" کس کو کہا جاتا ہے؟',h:'Who is called the Poet of the East?',o:['میر تقی میر','علامہ اقبال','مرزا غالب','فیض احمد فیض'],a:1,e:'Allama Iqbal is known as Shair-e-Mashriq.'},
+{q:'"کتاب" کی جمع کیا ہے؟',h:'What is the plural of kitab (book)?',o:['کتابیں','کتابات','کتب خانہ','کتابے'],a:0,e:'The common plural is کتابیں.'},
+{q:'"صبح" کا متضاد کیا ہے؟',h:'Opposite of subah (morning)',o:['دوپہر','شام','سویرا','فجر'],a:1,e:'The opposite of صبح is شام.'},
+{q:'"پانی" کا مترادف کون سا ہے؟',h:'Synonym of pani (water)',o:['آگ','ہوا','آب','خاک'],a:2,e:'آب is a synonym of پانی.'}],
+Intermediate:[
+{q:'ایسا لفظ جو کسی شخص، جگہ یا چیز کا نام ہو، کیا کہلاتا ہے؟',h:'A word that names a person, place or thing is called…',o:['فعل','اسم','حرف','صفت'],a:1,e:'اسم (noun) names a person, place or thing.'},
+{q:'غزل کا پہلا شعر کیا کہلاتا ہے؟',h:'What is the first couplet of a ghazal called?',o:['مقطع','مطلع','قافیہ','ردیف'],a:1,e:'The opening couplet is the مطلع. The last one is the مقطع.'},
+{q:'میر تقی میر کو کس لقب سے یاد کیا جاتا ہے؟',h:'Which title is given to Mir Taqi Mir?',o:['خدائے سخن','شاعرِ مشرق','ملک الشعراء','نغمہ نگار'],a:0,e:'Mir is called Khuda-e-Sukhan (god of poetry).'},
+{q:'ناول "امراؤ جان ادا" کے مصنف کون ہیں؟',h:'Who wrote the novel Umrao Jan Ada?',o:['پریم چند','مرزا ہادی رسوا','نذیر احمد','منٹو'],a:1,e:'Mirza Hadi Ruswa wrote Umrao Jan Ada.'},
+{q:'"نو سو چوہے کھا کر بلی حج کو چلی" کا مطلب کیا ہے؟',h:'What does this proverb mean?',o:['بہت کھانا اچھا ہے','برے کام کر کے نیک بننے کا دکھاوا','سفر ضروری ہے','بلی چوہے پکڑتی ہے'],a:1,e:'It describes someone who acts pious after a lifetime of wrongdoing.'}],
+Advanced:[
+{q:'مثنوی "سحرالبیان" کے مصنف کون ہیں؟',h:'Who wrote the masnavi Sihr-ul-Bayan?',o:['میر حسن','میر انیس','نظیر اکبرآبادی','ولی دکنی'],a:0,e:'Mir Hasan wrote Sihr-ul-Bayan.'},
+{q:'"آبِ حیات" کس کی تصنیف ہے؟',h:'Who wrote Ab-e-Hayat?',o:['الطاف حسین حالی','شبلی نعمانی','محمد حسین آزاد','سر سید احمد خان'],a:2,e:'Muhammad Husain Azad wrote Ab-e-Hayat.'},
+{q:'غزل میں قافیے کے بعد بار بار آنے والے الفاظ کو کیا کہتے ہیں؟',h:'Words repeated after the rhyme in a ghazal',o:['مطلع','بحر','ردیف','وزن'],a:2,e:'The repeated words after the qafia are the ردیف.'},
+{q:'"غبارِ خاطر" کے مصنف کون ہیں؟',h:'Who wrote Ghubar-e-Khatir?',o:['مولانا ابوالکلام آزاد','رشید احمد صدیقی','مولوی عبدالحق','کرشن چندر'],a:0,e:'Maulana Abul Kalam Azad wrote Ghubar-e-Khatir (letters from prison).'},
+{q:'"مسدسِ حالی" کے شاعر کون ہیں؟',h:'Who is the poet of Musaddas-e-Hali?',o:['اکبر الہ آبادی','الطاف حسین حالی','حسرت موہانی','جوش ملیح آبادی'],a:1,e:'Altaf Husain Hali wrote the Musaddas.'}]
+};
+var box=document.getElementById('quizBox'),lvl='Beginner',i=0,score=0;
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function tabs(){return '<div class="tabs" role="group" aria-label="Level">'+Object.keys(DATA).map(function(k){return '<button class="tab" aria-pressed="'+(k===lvl)+'" data-l="'+k+'">'+k+'</button>'}).join('')+'</div>'}
+function show(){
+ var L=DATA[lvl];
+ if(i>=L.length){
+  box.innerHTML=tabs()+'<div class="res"><b>'+score+'/'+L.length+'</b><p>'+(score===L.length?'Perfect score. Try the next level.':score>=3?'Good work. A little practice will make it perfect.':'Keep going. Our teachers can help you improve.')+'</p><div class="row"><button class="btn" id="again">Try again</button><a class="btn ghost" href="#join">Join a class</a></div></div>';
+  return;}
+ var d=L[i];
+ box.innerHTML=tabs()+'<div class="prog">Question '+(i+1)+' of '+L.length+'</div><div class="bar2"><i style="width:'+(i/L.length*100)+'%"></i></div><p class="q" lang="ur">'+d.q+'</p><p class="hint">'+esc(d.h)+'</p><div class="opts">'+d.o.map(function(o,n){return '<button class="opt" lang="ur" data-n="'+n+'">'+o+'</button>'}).join('')+'</div><p class="fb" id="fb"></p>';
+}
+box.addEventListener('click',function(e){
+ var b=e.target.closest('button');if(!b)return;
+ if(b.dataset.l){lvl=b.dataset.l;i=0;score=0;show();return}
+ if(b.id==='again'){i=0;score=0;show();return}
+ if(b.id==='nx'){i++;show();return}
+ if(b.classList.contains('opt')){
+  var d=DATA[lvl][i],n=+b.dataset.n,all=box.querySelectorAll('.opt');
+  all.forEach(function(x){x.disabled=true});
+  all[d.a].classList.add('ok');
+  if(n===d.a){score++}else{b.classList.add('no')}
+  document.getElementById('fb').innerHTML='<b>'+(n===d.a?'Correct.':'Not quite.')+'</b> '+esc(d.e)+'<br><button class="btn next" id="nx">'+(i===DATA[lvl].length-1?'See my score':'Next question')+'</button>';
+ }
+});
+show();
+var wa=document.getElementById('wa');
+wa.addEventListener('click',function(){
+ var n=document.getElementById('nm').value.trim()||'a student';
+ var l=document.getElementById('lv').value;
+ wa.href='https://wa.me/'+PHONE+'?text='+encodeURIComponent('Hello, I am '+n+'. I want to join NGU Urdu Coaching ('+l+' level).');
+});
+</script>
+</body>
+</html>
