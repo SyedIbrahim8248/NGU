@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NGU Urdu Online Coaching</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --navy: #10277f;
+    --gold: #ffc42e;
+    --ink: #14204e;
+    --text: #34405f;
+    --muted: #68728d;
+    --bg: #ffffff;
+    --soft: #f3f5fc;
+    --card: #ffffff;
+    --line: #e1e5f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.7 Poppins, Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+.wrap {
+    width: min(1080px, calc(100% - 36px));
+    margin: auto;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+}
+
+.nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font: 700 21px "Playfair Display", serif;
+    color: var(--ink);
+}
+
+.brand img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 30px;
+    padding: 12px 22px;
+    background: var(--gold);
+    color: #211900;
+    text-decoration: none;
+    font: 600 14px Poppins, Arial, sans-serif;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(.96);
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid currentColor;
+    color: inherit;
+}
+
+.hero {
+    background: var(--navy);
+    color: #fff;
+    padding: 72px 0;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 36px;
+    align-items: center;
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 0;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 5vw, 56px);
+    color: white;
+}
+
+.hero p {
+    color: #e0e6ff;
+    max-width: 590px;
+    margin: 18px 0 26px;
+}
+
+.hero .outline {
+    color: #fff;
+    margin-left: 8px;
+}
+
+.hero-card {
+    background: white;
+    color: var(--ink);
+    border-radius: 24px;
+    padding: 28px;
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+}
+
+.hero-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin: 0 auto 10px;
+}
+
+.urdu {
+    font: 700 34px/2 "Noto Nastaliq Urdu", serif;
+    direction: rtl;
+    color: var(--navy);
+}
+
+section {
+    padding: 72px 0;
+}
+
+.soft {
+    background: var(--soft);
+}
+
+.section-head {
+    max-width: 650px;
+    margin-bottom: 36px;
+}
+
+.section-head h2 {
+    font-size: clamp(28px, 4vw, 40px);
+}
+
+.section-head p {
+    color: var(--muted);
+    margin: 10px 0 0;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.faculty {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+}
+
+.faculty img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 18px;
+    border: 5px solid var(--gold);
+}
+
+.faculty h3 {
+    font-size: 23px;
+    margin: 8px 0;
+}
+
+.faculty p {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.role {
+    color: #947000;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.learn-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.learn-item {
+    background: white;
+    border-left: 4px solid var(--gold);
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.learn-item h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.learn-item p {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+}
+
+.quiz {
+    max-width: 760px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 26px;
+}
+
+.tabs {
+    display: flex;
+    gap: 9px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.tab {
+    border: 1px solid var(--line);
+    background: white;
+    border-radius: 22px;
+    padding: 8px 18px;
+    cursor: pointer;
+    font: 500 14px Poppins;
+}
+
+.tab.active {
+    background: var(--navy);
+    color: white;
+    border-color: var(--navy);
+}
+
+.progress {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.track {
+    height: 6px;
+    background: var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.track span {
+    display: block;
+    height: 100%;
+    background: var(--gold);
+}
+
+.question {
+    font: 500 24px/2 "Noto Nastaliq Urdu", serif;
+    direction: rtl;
+    text-align: right;
+    color: var(--ink);
+    margin: 0;
+}
+
+.hint {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.options {
+    display: grid;
+    gap: 10px;
+}
+
+.option {
+    font: 500 20px/2 "Noto Nastaliq Urdu", serif;
+    direction: rtl;
+    text-align: right;
+    padding: 7px 15px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.option:disabled {
+    cursor: default;
+}
+
+.option.correct {
+    background: #e4f7eb;
+    border-color: #219653;
+    color: #135c32;
+}
+
+.option.wrong {
+    background: #fde8e8;
+    border-color: #d33;
+}
+
+.feedback {
+    min-height: 28px;
+    margin-top: 14px;
+}
+
+.result {
+    text-align: center;
+    padding: 15px;
+}
+
+.result strong {
+    font: 800 52px "Playfair Display";
+    color: var(--ink);
+}
+
+.cta {
+    background: var(--navy);
+    color: white;
+    border-radius: 24px;
+    padding: 42px 24px;
+    text-align: center;
+}
+
+.cta h2 {
+    color: white;
+    font-size: clamp(27px, 4vw, 38px);
+}
+
+.cta p {
+    color: #e0e6ff;
+    margin: 12px auto 22px;
+}
+
+.form {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.form input,
+.form select {
+    width: min(260px, 100%);
+    padding: 13px 15px;
+    border: 1px solid #ffffff77;
+    border-radius: 10px;
+    background: white;
+    color: #222;
+    font: 15px Poppins;
+}
+
+.cta .outline {
+    color: white;
+    border-color: #ffffff88;
+}
+
+.contact-line {
+    margin-top: 18px;
+    color: #e0e6ff;
+}
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    border-top: 1px solid var(--line);
+}
+
+@media(max-width:800px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-card {
+        order: -1;
+    }
+
+    .grid3 {
+        grid-template-columns: 1fr;
+    }
+
+    .learn-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav .hide {
+        display: none;
+    }
+}
+
+@media(max-width:520px) {
+    .learn-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 48px 0;
+    }
+
+    .hero .outline {
+        margin: 10px 0 0;
+    }
+
+    .quiz {
+        padding: 18px;
+    }
+
+    .nav {
+        height: 64px;
+    }
+
+    .brand {
+        font-size: 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="wrap nav">
+
+        <a class="brand" href="#home">
+            <img src="logo.png" alt="NGU logo">
+            <span>NGU Urdu Coaching</span>
+        </a>
+
+        <nav aria-label="Main navigation">
+            <a class="hide" href="#faculty">Faculty</a>
+            <a class="hide" href="#learn">Courses</a>
+            <a class="hide" href="#quiz">Free Quiz</a>
+            <a class="btn" href="#join">Join Now</a>
+        </nav>
+
+    </div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+    <div class="wrap hero-grid">
+
+        <div>
+            <h1>Learn Urdu language and literature from trained teachers</h1>
+
+            <p>
+                Online coaching with experienced faculty.
+                Improve your Urdu reading, writing, grammar and literature skills from home.
+            </p>
+
+            <a class="btn" href="#join">Book a free demo class</a>
+
+            <a class="btn outline" href="#faculty">Meet the faculty</a>
+        </div>
+
+        <div class="hero-card">
+            <img src="logo.png" alt="NGU logo">
+            <div class="urdu" lang="ur">اردو زبان و ادب</div>
+            <div>Urdu language and literature</div>
+        </div>
+
+    </div>
+</section>
+
+<section id="faculty">
+    <div class="wrap">
+
+        <div class="section-head">
+            <h2>Our Faculty</h2>
+            <p>Learn with our dedicated Urdu language and literature teachers.</p>
+        </div>
+
+        <div class="grid3">
+
+            <article class="faculty">
+                <img src="anamta.jpg" alt="Anamta Javed Khan">
+                <div class="role">Senior Faculty</div>
+                <h3>Anamta Javed Khan</h3>
+                <p>Urdu Language &amp; Literature</p>
+                <p>Jamia Millia Islamia, New Delhi</p>
+                <b>3+ years teaching experience</b>
+            </article>
+
+            <article class="faculty">
+                <img src="faheem.jpg" alt="Faheem Sir">
+                <div class="role">Senior Faculty</div>
+                <h3>Faheem Sir</h3>
+                <p>Urdu Language &amp; Literature</p>
+                <p>Fazil, Darul Uloom Deoband<br>M.A., MANUU Hyderabad</p>
+                <b>6 years teaching experience</b>
+            </article>
+
+            <article class="faculty">
+                <img src="director.jpg" alt="Director Sir">
+                <div class="role">Director</div>
+                <h3>Director Sir</h3>
+                <p>Teaching &amp; Academic Guidance</p>
+                <p>B.S., MANUU<br>Diploma, University of Delhi</p>
+                <b>3+ years teaching and guidance</b>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section id="learn" class="soft">
+    <div class="wrap">
+
+        <div class="section-head">
+            <h2>What You Learn</h2>
+            <p>Build a strong foundation in Urdu with structured lessons and practice.</p>
+        </div>
+
+        <div class="learn-grid">
+
+            <div class="learn-item">
+                <h3>Reading &amp; Writing</h3>
+                <p>Urdu script, spelling and correct sentences.</p>
+            </div>
+
+            <div class="learn-item">
+                <h3>Grammar</h3>
+                <p>Rules of Urdu grammar with daily practice.</p>
+            </div>
+
+            <div class="learn-item">
+                <h3>Literature</h3>
+                <p>Prose and poetry, with meanings and context.</p>
+            </div>
+
+            <div class="learn-item">
+                <h3>Exam Guidance</h3>
+                <p>Study plans and revision for your exams.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="quiz">
+    <div class="wrap">
+
+        <div class="section-head">
+            <h2>Test Your Urdu</h2>
+            <p>Choose a level and answer five questions. You will see the correct answer after each question.</p>
+        </div>
+
+        <div class="quiz" id="quizBox" aria-live="polite"></div>
+
+    </div>
+</section>
+
+<section id="join">
+    <div class="wrap">
+
+        <div class="cta">
+
+            <h2>Start With a Free Demo Class</h2>
+
+            <p>
+                Enter your name and course level.
+                Send your enquiry directly to our WhatsApp.
+            </p>
+
+            <div class="form">
+
+                <input
+                    id="studentName"
+                    type="text"
+                    placeholder="Your name"
+                    aria-label="Your name"
+                >
+
+                <select id="studentLevel" aria-label="Course level">
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                </select>
+
+            </div>
+
+            <a class="btn" href="#" id="whatsappButton">
+                Send on WhatsApp
+            </a>
+
+            <a class="btn outline" href="tel:+916201708997">
+                Call: 6201708997
+            </a>
+
+            <div class="contact-line">
+                Contact / WhatsApp: <strong>6201708997</strong>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="wrap">
+        © <span id="year"></span> NGU Urdu Online Coaching
+    </div>
+</footer>
+
+<script>
+
+"use strict";
+
+// WhatsApp number with India country code.
+// Do not add +, spaces or hyphens.
+const WHATSAPP_NUMBER = "916201708997";
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+const quizData = {
+
+Beginner: [
+
+{
+q:"اردو کس طرف سے لکھی جاتی ہے؟",
+h:"Which direction is Urdu written in?",
+o:["دائیں سے بائیں","بائیں سے دائیں","اوپر سے نیچے","نیچے سے اوپر"],
+a:0,
+e:"Urdu is written from right to left."
+},
+
+{
+q:"شاعرِ مشرق کس کو کہا جاتا ہے؟",
+h:"Who is called the Poet of the East?",
+o:["میر تقی میر","علامہ اقبال","مرزا غالب","فیض احمد فیض"],
+a:1,
+e:"Allama Iqbal is known as Shair-e-Mashriq."
+},
+
+{
+q:"کتاب کی جمع کیا ہے؟",
+h:"What is the plural of kitab (book)?",
+o:["کتابیں","کتابات","کتب خانہ","کتابے"],
+a:0,
+e:"The common plural is کتابیں."
+},
+
+{
+q:"صبح کا متضاد کیا ہے؟",
+h:"What is the opposite of morning?",
+o:["دوپہر","شام","سویرا","فجر"],
+a:1,
+e:"The opposite of صبح is شام."
+},
+
+{
+q:"پانی کا مترادف کون سا ہے؟",
+h:"Which word is a synonym of water?",
+o:["آگ","ہوا","آب","خاک"],
+a:2,
+e:"آب is a synonym of پانی."
+}
+
+],
+
+Intermediate: [
+
+{
+q:"ایسا لفظ جو کسی شخص، جگہ یا چیز کا نام ہو، کیا کہلاتا ہے؟",
+h:"A word that names a person, place or thing is called…",
+o:["فعل","اسم","حرف","صفت"],
+a:1,
+e:"اسم (noun) names a person, place or thing."
+},
+
+{
+q:"غزل کا پہلا شعر کیا کہلاتا ہے؟",
+h:"What is the first couplet of a ghazal called?",
+o:["مقطع","مطلع","قافیہ","ردیف"],
+a:1,
+e:"The opening couplet is called مطلع."
+},
+
+{
+q:"میر تقی میر کو کس لقب سے یاد کیا جاتا ہے؟",
+h:"Which title is given to Mir Taqi Mir?",
+o:["خدائے سخن","شاعرِ مشرق","ملک الشعراء","نغمہ نگار"],
+a:0,
+e:"Mir is called Khuda-e-Sukhan."
+},
+
+{
+q:"ناول امراؤ جان ادا کے مصنف کون ہیں؟",
+h:"Who wrote Umrao Jan Ada?",
+o:["پریم چند","مرزا ہادی رسوا","نذیر احمد","منٹو"],
+a:1,
+e:"Mirza Hadi Ruswa wrote Umrao Jan Ada."
+},
+
+{
+q:"نو سو چوہے کھا کر بلی حج کو چلی کا مطلب کیا ہے؟",
+h:"What does this proverb mean?",
+o:["بہت کھانا اچھا ہے","برے کام کر کے نیک بننے کا دکھاوا","سفر ضروری ہے","بلی چوہے پکڑتی ہے"],
+a:1,
+e:"It describes someone acting pious after wrongdoing."
+}
+
+],
+
+Advanced: [
+
+{
+q:"مثنوی سحرالبیان کے مصنف کون ہیں؟",
+h:"Who wrote the masnavi Sihr-ul-Bayan?",
+o:["میر حسن","میر انیس","نظیر اکبرآبادی","ولی دکنی"],
+a:0,
+e:"Mir Hasan wrote Sihr-ul-Bayan."
+},
+
+{
+q:"آبِ حیات کس کی تصنیف ہے؟",
+h:"Who wrote Ab-e-Hayat?",
+o:["الطاف حسین حالی","شبلی نعمانی","محمد حسین آزاد","سر سید احمد خان"],
+a:2,
+e:"Muhammad Husain Azad wrote Ab-e-Hayat."
+},
+
+{
+q:"غزل میں قافیے کے بعد بار بار آنے والے الفاظ کو کیا کہتے ہیں؟",
+h:"What are the repeated words after the rhyme in a ghazal?",
+o:["مطلع","بحر","ردیف","وزن"],
+a:2,
+e:"The repeated words after qafia are called ردیف."
+},
+
+{
+q:"غبارِ خاطر کے مصنف کون ہیں؟",
+h:"Who wrote Ghubar-e-Khatir?",
+o:["مولانا ابوالکلام آزاد","رشید احمد صدیقی","مولوی عبدالحق","کرشن چندر"],
+a:0,
+e:"Maulana Abul Kalam Azad wrote Ghubar-e-Khatir."
+},
+
+{
+q:"مسدسِ حالی کے شاعر کون ہیں؟",
+h:"Who is the poet of Musaddas-e-Hali?",
+o:["اکبر الہ آبادی","الطاف حسین حالی","حسرت موہانی","جوش ملیح آبادی"],
+a:1,
+e:"Altaf Husain Hali wrote the Musaddas."
+}
+
+]
+
+};
+
+const quizBox = document.getElementById("quizBox");
+
+let currentLevel = "Beginner";
+let questionIndex = 0;
+let score = 0;
+
+function renderQuiz() {
+
+    const questions = quizData[currentLevel];
+
+    const levelButtons = Object.keys(quizData).map(level =>
+
+        `<button
+            type="button"
+            class="tab ${level === currentLevel ? "active" : ""}"
+            data-level="${level}"
+            aria-pressed="${level === currentLevel}">
+            ${level}
+        </button>`
+
+    ).join("");
+
+    if (questionIndex >= questions.length) {
+
+        quizBox.innerHTML = `
+            <div class="tabs">${levelButtons}</div>
+
+            <div class="result">
+
+                <strong>${score}/${questions.length}</strong>
+
+                <p>
+                    ${
+                        score === questions.length
+                        ? "Perfect score!"
+                        : score >= 3
+                        ? "Good work! Keep practising."
+                        : "Keep going. Practice makes progress."
+                    }
+                </p>
+
+                <button type="button" class="btn" id="retry">
+                    Try again
+                </button>
+
+            </div>
+        `;
+
+        return;
+    }
+
+    const q = questions[questionIndex];
+
+    quizBox.innerHTML = `
+
+        <div class="tabs">${levelButtons}</div>
+
+        <div class="progress">
+            Question ${questionIndex + 1} of ${questions.length}
+        </div>
+
+        <div class="track">
+            <span style="width:${questionIndex / questions.length * 100}%"></span>
+        </div>
+
+        <p class="question" lang="ur">${q.q}</p>
+
+        <p class="hint">${q.h}</p>
+
+        <div class="options">
+
+            ${q.o.map((option, index) => `
+
+                <button
+                    type="button"
+                    class="option"
+                    data-answer="${index}"
+                    lang="ur">
+
+                    ${option}
+
+                </button>
+
+            `).join("")}
+
+        </div>
+
+        <div class="feedback" id="feedback" aria-live="polite"></div>
+
+    `;
+}
+
+quizBox.addEventListener("click", event => {
+
+    const button = event.target.closest("button");
+
+    if (!button) return;
+
+    if (button.dataset.level) {
+
+        currentLevel = button.dataset.level;
+        questionIndex = 0;
+        score = 0;
+
+        renderQuiz();
+        return;
+    }
+
+    if (button.id === "retry") {
+
+        questionIndex = 0;
+        score = 0;
+
+        renderQuiz();
+        return;
+    }
+
+    if (button.id === "next") {
+
+        questionIndex++;
+
+        renderQuiz();
+        return;
+    }
+
+    if (button.hasAttribute("data-answer")) {
+
+        const q = quizData[currentLevel][questionIndex];
+
+        const chosen = Number(button.dataset.answer);
+
+        const options = quizBox.querySelectorAll(".option");
+
+        options.forEach(option => {
+            option.disabled = true;
+        });
+
+        options[q.a].classList.add("correct");
+
+        if (chosen === q.a) {
+            score++;
+        } else {
+            button.classList.add("wrong");
+        }
+
+        document.getElementById("feedback").innerHTML = `
+
+            <strong>
+                ${chosen === q.a ? "Correct!" : "Not quite."}
+            </strong>
+
+            ${q.e}
+
+            <br>
+
+            <button type="button" class="btn" id="next">
+                ${
+                    questionIndex === quizData[currentLevel].length - 1
+                    ? "See my score"
+                    : "Next question"
+                }
+            </button>
+
+        `;
+
+    }
+
+});
+
+renderQuiz();
+
+
+// WHATSAPP BUTTON
+
+document.getElementById("whatsappButton").addEventListener("click", event => {
+
+    event.preventDefault();
+
+    const name = document.getElementById("studentName").value.trim();
+
+    const level = document.getElementById("studentLevel").value;
+
+    if (!name) {
+
+        alert("Please enter your name first.");
+
+        document.getElementById("studentName").focus();
+
+        return;
+    }
+
+    const message =
+        "Assalamu Alaikum NGU Urdu Coaching!\n\n" +
+        "My name is " + name + ".\n" +
+        "I am interested in the " + level + " course.\n\n" +
+        "Please share the fees, batch timings and free demo class details.";
+
+    const whatsappURL =
+        "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
